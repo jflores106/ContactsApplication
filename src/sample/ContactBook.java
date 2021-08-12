@@ -150,7 +150,6 @@ public class ContactBook {
                     int index = this.contacts.indexOf(c);
                     this.contacts.remove(index);
                 }
-
             }
 
         } catch (IOException | ParseException e) {
