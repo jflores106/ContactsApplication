@@ -1,0 +1,22 @@
+.root {
+    -fx-background-color: #d7eff7;
+}
+
+.button {
+    -fx-background-color: aliceblue;
+    -fx-border-color: silver;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Century Gothic";
+    -fx-pref-width: 150px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(skyblue, lightsteelblue);
+}
+
+.label {
+    -fx-font-size: 13px;
+    -fx-font-family: "Century Gothic";
+}
