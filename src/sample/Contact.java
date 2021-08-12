@@ -11,7 +11,7 @@ public class Contact {
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
-    } 
+    }
 
     public void setFirstName(String fn){
         this.firstName = fn;
