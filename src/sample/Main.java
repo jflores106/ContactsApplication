@@ -20,11 +20,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.event.*;
 import org.json.simple.parser.ParseException;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
-
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 
@@ -33,10 +31,6 @@ public class Main extends Application {
     ContactBook contactBook;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        /*Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();*/
 
         primaryStage.setTitle("Contacts");
         Image icon = new Image(getClass().getResourceAsStream("contactsIcon.png"));
@@ -153,11 +147,6 @@ public class Main extends Application {
 
         searchBtn.disableProperty().bind(Bindings.isEmpty(searchFirstName.textProperty()));
 
-//        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//        Scene scene2 = new Scene(alert, 50,50);
-//        Dialog<String> dialogBox = new Dialog<>();
-//        dialogBox.getDialogPane().getButtonTypes().add(ButtonType.OK);
-
         searchBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -176,9 +165,6 @@ public class Main extends Application {
                     dialogBox.setContentText("No contacts found!");
                     dialogBox.setTitle("Contacts");
                     dialogBox.showAndWait();
-//                    alert.setContentText("No contacts found!");
-//                    alert.show();
-
                 }
                 doList.addAll(c);
             }
@@ -230,7 +216,6 @@ public class Main extends Application {
         Button updateBtn = new Button("Update Contact");
         HBox hbUpdateBtn = new HBox(10);
         hbUpdateBtn.getChildren().add(updateBtn);
-
         grid.add(hbUpdateBtn, 4,1);
 
         updateBtn.setOnAction(actionEvent -> {
@@ -247,13 +232,9 @@ public class Main extends Application {
         });
 
         Scene scene = new Scene(grid, 700, 600);
-
         scene.getStylesheets().add("style.css");
-
-
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
 

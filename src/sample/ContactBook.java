@@ -10,11 +10,9 @@ public class ContactBook {
     public ArrayList<Contact> contacts;
     public FileWriter file;
 
-//update https://stackoverflow.com/questions/38913318/how-to-update-jsonarray-value-on-java/38913863
     public ContactBook() {
         this.contacts = new ArrayList<Contact>();
     }
-
 
     public void addContact(String fn, String ln, String num, String email) throws IOException, ParseException {
         File f = new File("./src/sample/Contacts.json");
